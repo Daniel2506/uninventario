@@ -145,6 +145,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Lord\Laroute\LarouteServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class
+
     ],
 
     /*
