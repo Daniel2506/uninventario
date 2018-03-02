@@ -4,7 +4,7 @@ return [
     'name' => 'Universidad Minuto de Dios.',
 	'nickname' => 'UniAPP',
 	'site' => 'http://www.uniminuto.edu/',
-	'image' => '/images/koi.png',
+	'image' => '/images/logo.png',
 
     'app' => [
         'name' => 'UninventarioAPP',

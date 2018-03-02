@@ -36,4 +36,14 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function getName()
+    {
+        return sprintf('%s', $this->attributes['name']);
+    }
+
+    public function getUsername()
+    {
+        return $this->attributes['username'];
+    }
 }
