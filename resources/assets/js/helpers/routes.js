@@ -6,7 +6,7 @@
 
             absolute: false,
             rootUrl: 'http://localhost',
-            routes : [{"host":null,"methods":["GET","HEAD"],"uri":"\/","name":null,"action":"Closure"}],
+            routes : [{"host":null,"methods":["GET","HEAD"],"uri":"auth\/login","name":null,"action":"App\Http\Controllers\Auth\AuthController@getLogin"},{"host":null,"methods":["POST"],"uri":"auth\/login","name":"auth\/login","action":"App\Http\Controllers\Auth\AuthController@postLogin"},{"host":null,"methods":["GET","HEAD"],"uri":"auth\/logout","name":"auth\/loout","action":"App\Http\Controllers\Auth\AuthController@getLogout"},{"host":null,"methods":["GET","HEAD"],"uri":"auth\/register","name":null,"action":"App\Http\Controllers\Auth\AuthController@getRegister"},{"host":null,"methods":["POST"],"uri":"auth\/register","name":"auth\/register","action":"App\Http\Controllers\Auth\AuthController@postRegister"},{"host":null,"methods":["GET","HEAD"],"uri":"\/","name":null,"action":"Closure"}],
             prefix: '',
 
             route : function (name, parameters, route) {
