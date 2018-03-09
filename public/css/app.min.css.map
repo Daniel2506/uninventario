@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA","file":"app.min.css","sourcesContent":[]}
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AACA;EACC,gBAAgB;EAChB,mBAAmB;EAChB,oBAAoB,EACvB;;AAEgB;EAChB,iBAAiB,EACjB","file":"app.min.css","sourcesContent":["// @import \"node_modules/bootstrap-sass/assets/stylesheets/bootstrap\";\nlabel {\n\tfont-size: 12px;\n\tmargin-bottom: 2px;\n    white-space: nowrap;\n}\n\n.form-horizontal .control-label {\n\ttext-align: left;\n}\n"]}

@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
-use App\User;
+use App\Models\Admin\User;
 use Validator;
 use Auth;
 use App\Http\Controllers\Controller;
@@ -56,6 +56,7 @@ class AuthController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'last_name' => $data['last_name'],
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => bcrypt($data['password']),

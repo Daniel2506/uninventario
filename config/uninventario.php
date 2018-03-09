@@ -7,7 +7,7 @@ return [
 	'image' => '/images/logo.png',
 
     'app' => [
-        'name' => 'UninventarioAPP',
+        'name' => 'Uninventario',
         'site' => 'http://www.uniminuto.edu/',
         'image' => [
             'logo' => '/images/logo.png',

@@ -44,11 +44,15 @@
 				<p class="login-box-msg">Registrar un nuevo usuario</p>
 				{!! Form::open(['route' => 'auth/register', 'id' => 'form-login-account', 'data-toggle' => 'validator']) !!}
                     <div class="form-group has-feedback">
-                        <input type="text" name="name" class="form-control" placeholder="Nombre completo" maxlength="255" required>
+                        <input type="text" name="name" class="form-control" placeholder="Nombres" maxlength="100" required>
                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">
-                        <input type="email" name="email" class="form-control" placeholder="Email" maxlength="255" required>
+                        <input type="text" name="last_name" class="form-control" placeholder="Apellidos" maxlength="100" required>
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <input type="email" name="email" class="form-control" placeholder="Email" maxlength="100" required>
                         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     </div>
                     <div class="form-group has-feedback">

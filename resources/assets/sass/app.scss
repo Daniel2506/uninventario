@@ -1,2 +1,10 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+label {
+	font-size: 12px;
+	margin-bottom: 2px;
+    white-space: nowrap;
+}
 
+.form-horizontal .control-label {
+	text-align: left;
+}

@@ -11,8 +11,17 @@ app || (app = {});
 
     app.AppRouter = new( Backbone.Router.extend({
         routes : {
-            //Login
-            // 'auth/login(/)': 'getLogin',
+            /*
+            |-----------------------
+            | Administracion
+            |-----------------------
+            */
+
+            //Users
+            'users(/)': 'getUsersMain',
+            // 'users/create(/)': 'getUsersCreate',
+            // 'users/:user(/)': 'getUsersShow',
+            // 'users/:user/edit(/)': 'getUsersEdit',
         },
 
         /**
@@ -57,6 +66,17 @@ app || (app = {});
             }
 
             Backbone.history.start( config );
+        },
+
+        // Users
+        getUsersMain: function () {
+
+            if ( this.mainUsersView instanceof Backbone.View ){
+                this.mainUsersView.stopListening();
+                this.mainUsersView.undelegateEvents();
+            }
+
+            this.mainUsersView = new app.getUsersMain( );
         },
     }));
 })(jQuery, this, this.document);

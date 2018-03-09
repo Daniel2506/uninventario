@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models\Admin;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password', 'username'];
+    protected $fillable = ['name', 'last_name', 'email', 'password', 'username'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -39,7 +39,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function getName()
     {
-        return sprintf('%s', $this->attributes['name']);
+        return "{$this->attributes['name']} {$this->attributes['last_name']}" ;
     }
 
     public function getUsername()

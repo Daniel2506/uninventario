@@ -46,7 +46,7 @@
 				{!! Form::open(['route' => 'auth/login', 'id' => 'form-login-account', 'data-toggle' => 'validator']) !!}
                     <div class="form-group has-feedback">
                         <input type="text" name="username" class="form-control" placeholder="Usuario" maxlength="60" required>
-                        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                        <span class="glyphicon glyphicon-user form-control-feedback"></span>
                     </div>
 					<div class="form-group has-feedback">
 						<input type="password" name="password" class="form-control" placeholder="Contraseña" maxlength="255" required>
