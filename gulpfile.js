@@ -27,7 +27,8 @@ elixir(function(mix) {
         paths.libs + 'jquery-ui/themes/base/theme.css',
         paths.libs + 'bootstrap-datepicker/dist/css/bootstrap-datepicker3.css',
         paths.adminlte + 'plugins/timepicker/bootstrap-timepicker.css',
-        paths.libs + 'fullcalendar/dist/fullcalendar.min.css'
+        paths.libs + 'fullcalendar/dist/fullcalendar.css',
+        paths.libs + 'font-awesome/css/font-awesome.css'
     ], 'public/css/vendor.min.css');
 
     mix.sass('app.scss', 'public/css/app.min.css');
