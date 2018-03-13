@@ -20,16 +20,11 @@
 				</div>
 
 				<div class="form-group">
-					<div class="col-md-offset-3 col-md-2 col-xs-4">
+					<div class="col-md-offset-4 col-md-2 col-xs-4">
 						<button type="button" class="btn btn-default btn-block btn-md btn-clear">Limpiar</button>
 					</div>
 					<div class="col-md-2 col-xs-4">
 						<button type="button" class="btn btn-primary btn-block btn-md btn-search">Buscar</button>
-					</div>
-					<div class="col-md-2 col-xs-4">
-						<a href="{{ route('users.create') }}" class="btn btn-default btn-block btn-md">
-							<i class="fa fa-user-plus"></i> Nuevo
-						</a>
 					</div>
 				</div>
 			{!! Form::close() !!}

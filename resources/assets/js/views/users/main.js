@@ -25,7 +25,7 @@ app || (app = {});
 
             this.$usersSearchTable = this.$('#users-search-table');
             this.$searchName = this.$('#name');
-            this.$searchMail = this.$('#mail');
+            this.$searchMail = this.$('#email');
 
             this.usersSearchTable = this.$usersSearchTable.DataTable({
                 dom: "<'row'<'col-sm-12'tr>>" +
@@ -37,7 +37,7 @@ app || (app = {});
                     url: window.Misc.urlFull( Route.route('users.index') ),
                     data: function( data ) {
                         data.persistent = true;
-                        data.user_nombre = _this.$searchName.val();
+                        data.user_name = _this.$searchName.val();
                         data.user_email = _this.$searchMail.val();
                     }
                 },
@@ -50,13 +50,24 @@ app || (app = {});
                 columnDefs: [
                     {
                         targets: 0,
-                        width: '15%',
+                        width: '5%',
                         render: function ( data, type, full, row ) {
-                            return '<a href="'+ window.Misc.urlFull( Route.route('users.show', {users: full.id }) )  +'">' + data + '</a>';
+                            return '<a href="'+ window.Misc.urlFull( Route.route('users.show', {users: full.id }) )  +'" title="Edit">' + data + '</a>';
                         }
                     }
                 ]
 			});
+        },
+        search: function(e) {
+            e.preventDefault();
+            this.usersSearchTable.ajax.reload();
+        },
+
+        clear: function(e) {
+            e.preventDefault();
+            this.$searchName.val('');
+            this.$searchMail.val('');
+            this.usersSearchTable.ajax.reload();
         }
     });
 

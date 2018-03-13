@@ -22,7 +22,6 @@ elixir(function(mix) {
         paths.libs + 'jquery-ui/themes/base/spinner.css',
         paths.libs + 'jquery-ui/themes/base/theme.css',
         paths.libs + 'bootstrap/dist/css/bootstrap.css',
-        paths.libs + 'font-awesome/css/font-awesome.css',
         paths.adminlte + 'dist/css/skins/skin-blue.css',
         paths.adminlte + 'dist/css/AdminLTE.css',
         paths.adminlte + 'plugins/iCheck/minimal/green.css',
@@ -65,8 +64,8 @@ elixir(function(mix) {
     // Cache busting
     mix.version(['css/app.min.css', 'css/vendor.min.css', 'js/app.min.js', 'js/vendor.min.js']);
 
-    mix.copy(paths.adminlte + 'bootstrap/fonts/', 'public/build/fonts');
     mix.copy(paths.adminlte + 'plugins/iCheck/minimal/green**.png', 'public/build/css');
+    mix.copy(paths.libs + 'bootstrap/fonts/', 'public/build/fonts');
     mix.copy(paths.libs + 'fine-uploader/dist/**.gif', 'public/build/css');
     mix.copy(paths.libs + 'font-awesome/fonts/', 'public/build/fonts');
     mix.copy(paths.libs + 'jquery-ui/themes/base/images/', 'public/build/css/images/');
